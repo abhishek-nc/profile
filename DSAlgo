@@ -1,0 +1,1014 @@
+Data structures and Algorithm
+
+Reference
+
+https://github.com/soapyigu/LeetCode-Swift 
+https://www.geeksforgeeks.org/practice-for-cracking-any-coding-interview/ 
+https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/ ****** 212 imp Q ***
+https://www.techiedelight.com/ ***** well org, all catg ***
+https://www.ideserve.co.in/#trees 
+
+BODMAS 
+
+
+Approaching the problem
+Known structure ?
+Fresh mind - solve like a kid - Simple for / while / rec / 
+Try jugaad 
+Try hiding internal implementation ; (sort hide)(highest in array; skyline)
+
+
+
+Asymptotic Notations
+Asymptotic Analysis is the big idea that handles above issues in analyzing algorithms. In Asymptotic Analysis, we evaluate the performance of an algorithm in terms of input size (we don’t measure the actual running time). We calculate how the time (or space) taken by an algorithm increases with the input size.
+
+example of Linear Search and analyze it using Asymptotic analysis.
+We can have three cases to analyze an algorithm:
+1) Worst Case t(n) = O(n)
+2) Average Case sum(n)/n+1 = t(n) = θ(n)
+3) Best Case t(1) = Ω (n)
+3 asymptotic notations are mostly used to represent time complexity of algorithms.
+Omega
+Teta
+O
+
+
+Order of complexity
+
+Logn < N < nlogn < n^2
+
+
+Np - np complete - np hard 
+
+All recursive likee inclusive/exclusive are 2^n time complexity
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+Algorithm techniques
+
+
+Dynamic programming (optimal subp + overlap)(top + bottom)
+
+
+
+https://www.techiedelight.com/introduction-dynamic-programming/ 
+Breaking + memorising 
+Optimal substructure or overlapping subproblem
+
+--------------------------------------------------------------
+If we recalc solution to problem 
+{
+Consider sample ex set,
+Solve sample
+Write test/break case
+}
+topdown memorisation ex: map fib [2^n complexity]
+Memorise and store soltn as we find 
+{
+Write base/stop case
+Write include/exclude case
+Analyse return , max/+
+}
+bottomup tabulation ex: for loop fib, [m*n complexity (better)]
+Find soltn for small prob, and use that to solve larger problem 
+{
+Construct table[][]
+Initialise table for base case
+For loop, as recursive condition 
+} // use fib ex to recall 
+Memorisation  (recursive + memory)
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ (approach-3)
+
+
+Optimal substructure 
+If problem can be divided to smaller sub problem 
+
+Overlapping Subproblems
+If solutions to sub problem are calculated again and again
+
+wArmUp
+
+https://www.geeksforgeeks.org/program-print-substrings-given-string/ 
+https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching/ 
+
+
+ALG
+DP - 55
+https://blog.usejournal.com/top-50-dynamic-programming-practice-problems-4208fed71aa3   5000000 	Q
+https://www.geeksforgeeks.org/top-20-dynamic-programming-interview-questions/  
+Options strategy 
+Dp - for // func param + options
+Dp[][] - //func params
+*https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/ 
+*https://www.geeksforgeeks.org/cutting-a-rod-dp-13/ 
+https://www.geeksforgeeks.org/maximize-the-number-of-segments-of-length-p-q-and-r/ 
+https://www.geeksforgeeks.org/maximum-product-cutting-dp-36/ (further cutting)
+https://www.geeksforgeeks.org/palindrome-partitioning-dp-17/ 
+
+*https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/ 
+https://www.geeksforgeeks.org/boolean-parenthesization-problem-dp-37/ 
+https://www.geeksforgeeks.org/word-break-problem-dp-32/ 
+https://youtu.be/jQJyWcRPEpE type 2 //return strings
+{{{{https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/ (verified) sort approach finish time 
+https://www.techiedelight.com/weighted-interval-scheduling-problem/  weighed 
+https://www.geeksforgeeks.org/job-sequencing-problem/profit }}}}}
+
+Inclusion and exclusion rules 
+https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ (wt[n - 1] > W)
+https://www.geeksforgeeks.org/fractional-knapsack-problem/?ref=rp Knapsack greedy ; get value/size ; sort ; for loop  
+https://www.geeksforgeeks.org/unbounded-knapsack-repetition-items-allowed/
+https://practice.geeksforgeeks.org/problems/maximum-tip-calculator/0 
+
+* https://www.geeksforgeeks.org/subset-sum-problem-dp-25/ (rec → bottomup) 
+Similar to knapsack  //
+https://www.geeksforgeeks.org/partition-problem-dp-18/
+How many subsets summ == k
+https://www.geeksforgeeks.org/count-of-subsets-with-sum-equal-to-x/ 
+**https://www.geeksforgeeks.org/partition-a-set-into-two-subsets-such-that-the-difference-of-subset-sums-is-minimum/ 
+Sum remaining = Total sum  - opted sum // abs[opted sum - sum left] 
+Number of subset with given difference; https://youtu.be/ot_XBHyqpFc?t=422
+https://www.geeksforgeeks.org/number-of-ways-to-calculate-a-target-number-using-only-array-elements/
+https://www.geeksforgeeks.org/count-minimum-number-subsets-subsequences-consecutive-numbers/ 
+
+
+*https://www.geeksforgeeks.org/coin-change-dp-7/   
+2-dim bottom up 
+Coin change - 2 // https://youtu.be/ruMqWViJ2_U 
+https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/ 
+
+*****https://www.techiedelight.com/find-minimum-jumps-required-reach-destination/ 
+https://www.geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/ 
+Soltn 1, lookup[i]//memorisation //(arr[0] == 0)
+
+LIS // Pattern // count // 
+*https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/   lis[...]
+Largest divisible subset // LIS variation // https://youtu.be/Wv6DlL0Sawg?t=858 
+https://www.geeksforgeeks.org/longest-bitonic-subsequence-dp-15/
+Max ; LIS + LDS - 1
+*https://www.geeksforgeeks.org/maximum-length-chain-of-pairs-dp-20/ bottom up
+*https://www.geeksforgeeks.org/maximum-sum-increasing-subsequence-dp-14/ list[..], print values 
+https://www.youtube.com/watch?v=99ssGWhLPUE ; counter[], update which index values addition contributed for max sum this time
+
+
+
+
+
+write reccu solu
+*https://www.geeksforgeeks.org/longest-common-substring-dp-29/ diagonal lookup
+PreviewPreview5:31Longest Common Substring 
+		Matrix trick [...][...] ←- identify inpts  
+Print sequence *https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/ 
+https://www.youtube.com/watch?v=NnD96abizww 
+Print sequences also
+Diff utility ; https://www.techiedelight.com/implement-diff-utility/
+*https://www.geeksforgeeks.org/edit-distance-dp-5/ ??? what operations??
+https://www.youtube.com/watch?v=We3YDTzNXEk //recur
+https://www.techiedelight.com/find-minimum-number-deletions-convert-string-into-palindrome/
+*******https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/ 
+Recur easy : optimise by memorisation 
+We iterate over str length, then row by i and then col by j comp
+We store palindrome contribution /count as we proceed 
+https://www.geeksforgeeks.org/longest-palindrome-substring-set-1/
+Recur easy : optimise by memorisation Same as subsequence  
+We store whether it is a palindrome as we proceed, and calculate palin str length and store
+https://www.geeksforgeeks.org/shortest-common-supersequence/ 
+https://www.geeksforgeeks.org/word-wrap-problem-dp-19/ fv
+
+
+
+
+https://www.geeksforgeeks.org/length-of-the-longest-substring-without-repeating-characters/ remember the position hAsh
+i = max(i,hash[j]+1) // get the most recent reset position // due to curr char // some other char 
+//know recursive solution as well 
+https://www.geeksforgeeks.org/count-possible-paths-top-left-bottom-right-nxm-matrix/ - E
+https://www.geeksforgeeks.org/unique-paths-in-a-grid-with-obstacles/ 
+
+*https://massivealgorithms.blogspot.com/2019/02/minimum-cost-to-reach-point-n-from-0.html cool folks back linear approach 
+1-dimension bottomup; LIS
+*https://www.geeksforgeeks.org/count-number-of-ways-to-cover-a-distance/ 
+** https://www.techiedelight.com/reach-bottom-right-corner-matrix-exactly-k-turns/ 
+
+******https://www.geeksforgeeks.org/optimal-strategy-for-a-game-dp-31/ 
+https://www.geeksforgeeks.org/find-maximum-possible-stolen-value-houses/ 
+Space o(1) ??
+***** https://www.geeksforgeeks.org/min-cost-path-dp-6/ 
+https://www.geeksforgeeks.org/find-the-minimum-cost-to-reach-a-destination-where-every-station-is-connected-in-one-direction/ 
+https://www.programmercoach.com/2019/01/dynamic-programming-minimum-travel-cost_32.html 
+
+
+https://www.geeksforgeeks.org/dice-throw-dp-30/ t[roll-chances][sum] = rec -> BU
+https://www.geeksforgeeks.org/box-stacking-problem-dp-22/ 
+https://www.geeksforgeeks.org/find-the-longest-path-in-a-matrix-with-given-constraints/ strating from allcell + max path from each cell // d[i][j] store  max path len calc
+https://www.techiedelight.com/maximum-length-snake-sequence/ snake sequence
+https://www.geeksforgeeks.org/count-number-binary-strings-without-consecutive-1s/ 
+https://www.geeksforgeeks.org/find-if-a-string-is-interleaved-of-two-other-strings-dp-33/ 
+https://www.geeksforgeeks.org/count-possible-decodings-given-digit-sequence/ 
+**https://www.geeksforgeeks.org/wildcard-pattern-matching/ 
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Divide n Conquer - 4
+https://www.geeksforgeeks.org/binary-search/ mid = [low + high] /2 
+https://www.geeksforgeeks.org/merge-sort/ 
+https://www.geeksforgeeks.org/square-root-of-an-integer/ 
+https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/ ; binary search!?
+
+
+
+Greedy - 6
+Greedy logic, Make a greedy choice
+Ex : activity selection problem 
+Target // include more tasks
+Logic // sort tasks in order of finish time 
+Choice // choose 1st finish task
+
+https://www.techiedelight.com/Tags/greedy/ 
+https://www.techiedelight.com/activity-selection-problem/ not weighed
+https://www.geeksforgeeks.org/job-sequencing-problem/ ** n^2
+https://www.techiedelight.com/find-minimum-jumps-required-reach-destination/ 
+
+https://medium.com/algorithm-and-datastructure/two-city-scheduling-aed2019ae185 ** abs|diff|
+https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/ 
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/ 
+
+	
+
+
+
+Backtracking -  8
+isSafe()!, visited[!!] 
+Keys: All possible combo, 
+
+https://www.geeksforgeeks.org/sudoku-backtracking-7/ 
+https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/ 
+https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/ 
+https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/ 
+https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/ 
+
+https://www.geeksforgeeks.org/hamiltonian-cycle-backtracking-6/ (route all nodes 1nce)
+https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/ (min route HamCycle);  cost[i] + g[i][0]
+https://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/ 
+https://www.geeksforgeeks.org/program-generate-possible-valid-ip-addresses-given-string/ (ipaddress) DP easy
+https://www.geeksforgeeks.org/combinational-sum/ 
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+Array
+ 
+https://medium.com/@codingfreak/huge-collection-of-array-interview-questions-e87ac7c34e62 
+
+Brute force 
+xor, formulas,
+sort and perform, binary search,
+Hashmap, use array as hashmap(set-ve,set2n), hash->[index],
+Start from right/left, group +/-ve, 
+Generic  - 32
+How to find the missing number in an integer array of 1 to 100? : 
+n(n+1)/2 ; n ; 1 extra space
+Hashmap ; 2n; n extra space
+XOR ; 2n ; 1 extra space 
+Assume a1 ^ a2 ^ a3 ^ …^ an = a and a1 ^ a2 ^ a3 ^ …^ an-1 = b 
+Then a ^ b = an
+a.22--88? Missing 1 number
+https://www.geeksforgeeks.org/find-the-missing-number/ 
+https://www.techiedelight.com/find-missing-number-array-without-extra-space/ 
+
+How to find the 2 missing numbers in an integer array of 1 to 100? (a+b) and (a*b)
+Hashtable / xor 
+(a+b)?? ---- (a*b)?? ------------------      (a-b)2 = (a+b)2 - 4ab 
+(a*b)??(no formula)(use fact! Or cal while a+b)
+
+Hashmap 
+*** Smallest +ve missing number; sort =/- ve no / use array as hash by setting item as -ve/true
+https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/ using array as hashmap 
+
+{{ https://www.geeksforgeeks.org/longest-span-sum-two-binary-arrays/ $$ ;\ Method 3(diff array,  hash[sum of diff] = i )
+https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/ 
+https://youtu.be/9ZyLjjk536U?t=394   hashmap[sum] = pos $$  }}   - category 
+
+
+Ehttps://www.geeksforgeeks.org/find-the-minimum-distance-between-two-numbers/ check for repeated numbers, 3,6,6,3  // 1 var enough 
+if( p != -1 && arr[i] != arr[p])   
+Ehttps://www.geeksforgeeks.org/replace-every-element-with-the-greatest-on-right-side/ ; start from rightmost
+Ehttps://www.geeksforgeeks.org/find-a-fixed-point-in-a-given-array/ logn ?? binsearch
+Ehttps://www.geeksforgeeks.org/convert-array-into-zig-zag-fashion/ <!flagggg>
+https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/  **** hmmmm //  (findpivot ?? + do_bseearch??)
+https://www.geeksforgeeks.org/two-elements-whose-sum-is-closest-to-zero/ 
+Sort / l…….r ; abs(sum) < min_sum ; sum<0 ; l++ ; r-- // while(l < r)
+https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/ ; kuule in inside triangle
+A = [ x1(y2 – y3) + x2(y3 – y1) + x3(y1-y2)]  /2  ; palalli formula 
+https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/ hash → [postions] // o(n) o(1)
+If i have 2 include ; inc = exl + arr[i]
+		        exl = max(inc,exl)
+https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent-set-2/?ref=rp 
+https://www.geeksforgeeks.org/merge-one-array-of-size-n-into-another-one-of-size-mn/ walmart (move ele to end) and merge ;; k < m+n
+
+		Window problem
+https://www.geeksforgeeks.org/find-subarray-with-given-sum/ 
+Keep adding, iif sum exceeds required sum, remove staring elements as long 
+https://www.geeksforgeeks.org/maximum-sum-path-across-two-arrays/ sum1,sum2
+
+
+https://www.geeksforgeeks.org/median-of-two-sorted-arrays/ 
+easy i++j++m1,m2
+Median of 2 sub arrays 
+
+https://www.geeksforgeeks.org/maximum-difference-between-two-elements/
+Approach-2 // max diff //min ele
+Similar 2 stock buy sell (but can b/s only once) 
+https://www.geeksforgeeks.org/stock-buy-sell/ (buy multiple times) 
+while(i<n-1)  buy = i+1, sell  = i-1 // local=min/max
+https://www.youtube.com/watch?v=blUwDD6JYaE   (simple)
+https://www.geeksforgeeks.org/maximum-profit-by-buying-and-selling-a-share-at-most-k-times
+
+https://www.geeksforgeeks.org/length-of-the-longest-alternating-subarray/
+https://www.geeksforgeeks.org/longest-consecutive-subsequence/ 
+Sort-nlogn??  ;; o(n) using hashing ??
+https://www.techiedelight.com/count-strictly-increasing-sub-arrays/ 
+
+***https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/ 
+https://www.youtube.com/watch?v=HbbYPQc-Oo4 
+https://www.geeksforgeeks.org/number-subarrays-sum-less-k/
+https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/ https://www.youtube.com/watch?v=BVWxlcxW9Ww   
+Queue: front - highest value // if found high del all put at front ; else add to rear 
+https://www.youtube.com/watch?v=NWMcj5QFW74 merge 2 sorted arr o(1)space
+https://www.geeksforgeeks.org/count-subarrays-whose-maximum-element-greater-k/
+n*(n+1)/2 - S
+https://www.geeksforgeeks.org/largest-divisible-subset-array/ 
+
+///// backtrack max/min category 
+Largest number formed https://youtu.be/qEIGhVtZ-sg ; sort (ij,ji)
+https://www.geeksforgeeks.org/given-an-array-of-numbers-arrange-the-numbers-to-form-the-biggest-number/ sort ( x+y  >  y+x)
+https://www.geeksforgeeks.org/maximum-number-formed-from-array-with-k-number-of-adjacent-swaps-allowed/
+Ehttps://www.geeksforgeeks.org/find-maximum-number-possible-by-doing-at-most-k-swaps/
+Ehttps://www.techiedelight.com/find-minimum-number-possible-k-swaps/ 
+//////
+Perfect square //  https://youtu.be/tSy8lDLPduU 
+Town judgee // https://youtu.be/ZUP_tIs4VaE 
+
+ 
+ 
+--------------------------------------------------------------------------------------------------------------------------
+
+Hashing - 20
+https://www.geeksforgeeks.org/implementing-our-own-hash-table-with-separate-chaining-in-java/ 
+int n = sizeof(arr)/sizeof(arr[0]); // no of ele
+ HashSet<String> set = new HashSet<String>()
+	int *hashmap = new int[sizeof(int)*(n - 2)]//array
+var dic = [String:String]
+
+Space complexity: n most times
+
+https://www.geeksforgeeks.org/find-the-two-repeating-elements-in-a-given-array/-elements-in-a-given-array/ 
+With -ve no??  
+With space o(1) time o(n) immutable 
+// https://youtu.be/dfIqLxAf-8s?t=794 //using llist cycle 
+Find 
+Pair
+triplet, whose sum = x ,using hash **** qule
+1.Knapsack 
+2.Hashing ; consider overlap case 333 = 9 by [ele] = pos
+3.Unique triplets ??
+https://www.techiedelight.com/find-triplet-given-with-given-sum/
+!= i !=j
+Quadlet ; store sum of all pairs/2 in hash, find missing sum in hash https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/  
+ hash[sum] = (i,j)  ///
+https://www.geeksforgeeks.org/find-the-smallest-positive-number-missing-from-an-unsorted-array/ // -ve, least +ve, includes repeated 
+https://www.techiedelight.com/find-duplicates-within-given-range-array/ k far??
+Hashmap with [item:pos]
+https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/   0...9 ; arr[arr[i]%arr_size] = arr[arr[i]%arr_size] + arr_size;;;  [] > 2*arr_size
+check if the array contains a number  : linear,binary ?
+find largest and smallest number in unsorted array : sort,quick,merge,heap,normal 2 var
+
+find all pairs on integer array whose sum is equal to given number https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/ 
+https://www.geeksforgeeks.org/union-and-intersection-of-two-sorted-arrays-2/ 
+https://www.geeksforgeeks.org/majority-element/ array or linked list ;(BST best for sorted) or hash or sort or 
+ moore-vote o(1,1)  Without extra space: https://youtu.be/bg6r_fgtpMQ?t=353 
+// cancellaton strategy  
+https://www.geeksforgeeks.org/find-the-number-occurring-odd-number-of-times/ ; (hash or XOR best space complexity)
+Sort 0,1,2;  using hash
+Time o(n), space o(1) //https://youtu.be/sEQk8xgjx64?t=80 //low mid high (012)
+https://www.geeksforgeeks.org/counting-inversions/ using merge sort inv_count = inv_count + (mid - i)
+https://www.geeksforgeeks.org/equilibrium-index-of-an-array/ :)))))))) 
+https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/ sort and traverse simul 
+https://www.geeksforgeeks.org/reverse-an-array-in-groups-of-given-size/ 
+https://www.geeksforgeeks.org/trapping-rain-water/  critical thinking ; simple approach 1, efficient - last stack approach 
+https://www.geeksforgeeks.org/chocolate-distribution-problem/
+Crazy problem; sort and find sub array min diff
+https://www.geeksforgeeks.org/find-pythagorean-triplet-in-an-unsorted-array/ 
+Easy store squares in hash, deduce to pair whose sum is 
+https://www.geeksforgeeks.org/nuts-bolts-problem-lock-key-problem-set-2-hashmap/?ref=rp 
+First unique char https://youtu.be/ReUGo6fZafc?t=176 
+Unique element in logn in sorted array // https://youtu.be/nMGL2vlyJk0?t=73 
+Sort char by frequency // https://youtu.be/vltY5jxqcco 
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Array rotation - 4 
+( 2pointers)
+
+https://www.geeksforgeeks.org/move-zeroes-end-array-set-2-using-single-traversal/ 
+https://www.geeksforgeeks.org/segregate-even-odd-numbers-set-3/ 
+https://www.geeksforgeeks.org/rearrange-array-order-smallest-largest-2nd-smallest-2nd-largest/ 
+https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/ (sorted rotated repeated); find min 
+
+--------------------------------------------------------------------------------------------------------------------------
+
+	Matrix - 6
+https://www.geeksforgeeks.org/search-in-row-wise-and-column-wise-sorted-matrix/
+Top-right corner ;;; hstar
+https://www.geeksforgeeks.org/print-unique-rows/ : trie/hash _ m*n
+https://www.geeksforgeeks.org/maximum-size-sub-matrix-with-all-1s-in-a-binary-matrix/ : surrounding square check matrix
+Sum matrix, max_s to get size of ans array // M == 1 ?? S = min(1,2,3) + 1 // 
+Count square matrices with  all 1 // https://youtu.be/Z2h3rkVXPeQ?t=44 
+https://www.geeksforgeeks.org/program-print-lower-triangular-upper-triangular-matrix-array/ : i>j lower, i<j upper part, i==j diagonal
+https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/  ****
+ while (k < m && l < n) // 4 FOR
+Min cost to reach source to destination https://www.techiedelight.com/calculate-minimum-cost-to-reach-destination-city-from-source-city/ 
+Leftmost 1 in col // bin search or bottom up // https://youtu.be/K2E5fMMAf5U 
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Sorting - 8
+Quick sort: https://www.geeksforgeeks.org/quick-sort/
+Binary search
+Merge ; https://www.geeksforgeeks.org/merge-sort/  
+ while (i < n1 && j < n2) { 
+ms(l,mid); ms(mid+1,r) ; m(l,m,r) ; n1 = m-l+1 ; n2 = r-m
+Heap sort : https://www.youtube.com/watch?v=MtQL_ll5KhQ 
+Insertion sort ; https://www.geeksforgeeks.org/insertion-sort/ 
+Topological sort : https://www.geeksforgeeks.org/topological-sorting/ 
+Bubble sort: https://www.geeksforgeeks.org/bubble-sort/ 
+Selection sort ;https://www.geeksforgeeks.org/selection-sort/
+
+--------------------------------------------------------------------------------------------------------------------------
+String - 11
+Reverse array of char // https://youtu.be/LMeYeTXrGak?t=148
+https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching/ worst and best time complexity??
+*** https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/ *******
+https://www.geeksforgeeks.org/pattern-searching-using-trie-suffixes/?ref=rp **
+Rabin - karp 
+https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/ 
+https://www.youtube.com/watch?v=BfUejqd07yo&ab_channel=StableSort 
+
+*https://www.techiedelight.com/in-place-remove-all-adjacent-duplicates-from-string/
+https://www.techiedelight.com/determine-given-string-is-palindrome-not/ 
+https://www.geeksforgeeks.org/c-program-check-given-string-palindrome/ **** 
+low high (best) vs stack soltn
+https://www.geeksforgeeks.org/check-given-string-rotation-palindrome/ 
+Rotate once all and check *****
+https://www.geeksforgeeks.org/print-words-string-reverse-order/  ***
+
+
+*https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/ recursion **** backtracking
+Ehttps://www.hackerrank.com/challenges/ctci-ransom-note/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=dictionaries-hashmaps hash dick!!! (+) on magz (-) as u read ransom note
+Ehttps://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/ : 2 hash count : LISTEN==SILENT
+Find all anagrams // slide window // https://youtu.be/fYgU6Bi2fRg?t=177 
+Permutation string s1 iin s2 // slide win// https://youtu.be/XFh_AoEdOTw?t=199 
+
+https://www.geeksforgeeks.org/check-if-a-string-is-a-scrambled-form-of-another-string/
+https://www.geeksforgeeks.org/converting-roman-numerals-decimal-lying-1-3999/  
+10-X , 9-IX, 50-L, 40-XL,100- C,90- XC, 500-D, 400-CD, …..
+Excel columns 
+String shifts https://youtu.be/sNH-f_5Gm0I?t=189  
+Valid parenthesis // stack (open + star )// 4 condition // https://youtu.be/KuE_Cn3xhxI?t=107 
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+Trees
+Key for most of the prob is in the traversal, just replace print (~*~)
+>> Karna kya hai??
+>> L karo , R karo
+Technique:   Stop;  left; right; soltn  
+Tree traversal techniques:
+BFS - flat
+DFS - depth : inorder, pre, post  - iterative and recursive
+convert(tree-array)- solve
+
+Binary Tree - 17
+https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/ = 1 + max(Lheight,Rheight)
+https://www.geeksforgeeks.org/diameter-of-a-binary-tree-in-on-a-new-method/ // based on height of a tree : max(ans,1 + Lheight + Rheight) ////******
+https://www.geeksforgeeks.org/find-maximum-path-sum-in-a-binary-tree/ max(1..4)
+
+https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/ (height diff of L and R is <= 1) && isBal(L) && isBal(R)
+https://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
+https://www.geeksforgeeks.org/write-c-code-to-determine-if-two-trees-are-identical/ 
+https://www.geeksforgeeks.org/check-if-two-trees-are-mirror/ 
+
+Invert binary tree // https://youtu.be/_i0jqdVkObU 
+https://www.geeksforgeeks.org/product-nodes-k-th-level-tree-represented-string/ *|*
+https://www.geeksforgeeks.org/write-an-efficient-c-function-to-convert-a-tree-into-its-mirror-tree/ swap by temp  
+https://www.geeksforgeeks.org/level-order-tree-traversal/ ***** queue; print pop, push child as long as q is empty
+https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/ 
+Root, print Lborder , print leaves, print Rborder
+https://www.geeksforgeeks.org/root-to-leaf-path-sum-equal-to-a-given-number/ 
+https://www.geeksforgeeks.org/flatten-a-binary-tree-into-linked-list/  ****
+Ehttps://www.geeksforgeeks.org/convert-a-given-tree-to-sum-tree/ 
+Ehttps://www.geeksforgeeks.org/delete-leaf-nodes-value-x/ 
+https://www.geeksforgeeks.org/print-nodes-at-k-distance-from-root/ 
+https://www.geeksforgeeks.org/sum-leaf-nodes-minimum-level/ ****
+Level order traversal // hash 
+
+https://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/ 
+porder last is root, search that in inorder and split array and solve recc 1.R 2.L
+Cousins https://youtu.be/UyxnGWMvxwc  
+BST - 18
+https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/  *****
+https://medium.com/@codingfreak/binary-search-tree-bst-practice-problems-and-interview-questions-ea13a6731098 
+Balanced BST inorder traversal gives sorted array 
+ https://medium.com/omarelgabrys-blog/balanced-search-trees-68a95ba91f50 
+Binary search tree //////// balanced search tree
+https://www.geeksforgeeks.org/binary-search-tree-data-structure/ all ques 
++ traversal ways + q way 
+
+https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/ 
+Sorted linked list to Balanced ST
+1) Get the Middle of the linked list and make it root.
+2) Recursively do the same for the left half and right half.
+       a) Get the middle of left half and make it left child of the root
+          created in step 1.
+       b) Get the middle of right half and make it right child of the
+          root created in step 1.
+
+Check BST or not: min,max for each node 
+https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/ 
+
+failure case return 0 ;  (min < node < max) (min,data-1),(data+1,max)
+
+Binary/normal tree to Binary ST ( inorder array,, sort, update values in old tree)
+https://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/ 
+https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/arch-trees/ tree -> array > merge -> array -> tree 
+********https://www.geeksforgeeks.org/shortest-distance-between-two-nodes-in-bst/ ***** must **	 >= / <= ; dist from2 + dist from root
+https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/ easy -use inorder counter ;; use stack push inorder
+https://www.geeksforgeeks.org/fix-two-swapped-nodes-of-bst/ 
+Prev ;; First middle last //tracker for violation 
+Tc1; 2 adj node swapped first and middle
+Tc2: some 2 nodes swapped first and last 
+https://www.geeksforgeeks.org/largest-number-bst-less-equal-n/ :)
+If last, if not found, if found on left 
+
+For tree view ; 
+Consider queue, hashmaps,
+Consider heights, +1,-1 as we dig LR, maxlevel 
+https://www.geeksforgeeks.org/print-binary-tree-vertical-order-set-2/ (vertical)
+{{{{{{{ print as u reach new heights; priority based on side }}}}}}}}}    https://www.geeksforgeeks.org/print-left-view-binary-tree/?ref=rp  *** level + first visit
+https://www.geeksforgeeks.org/print-right-view-binary-tree-2/ 
+
+Quueue - top-bottom 
+https://www.geeksforgeeks.org/bottom-view-binary-tree/; consider height also + hash
+https://www.geeksforgeeks.org/print-nodes-top-view-binary-tree/
+ ; using queue(node,pos) and +-1 and hashmap(pos,bool) found ? print 
+
+
+https://www.geeksforgeeks.org/print-bottom-right-view-of-a-binary-tree/?ref=rp level + last visit // left +1 
+https://www.geeksforgeeks.org/diagonal-traversal-of-binary-tree/ (diagonal)
+https://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/ (spiral) amazon 
+2 stacks, s1/s2 alternatively for each levels to get spiral direction 
+While -----------( while -- while )   S1(R-L)  S2(L-R)
+
+
+eehttps://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/ 
+https://www.geeksforgeeks.org/connect-nodes-at-same-level/ Extend Pre Order Traversal
+Count Unique bst’s // catalan no // https://youtu.be/OIc0mHgHUww 
+------------------------------------------------------------------------------------------------------------------------
+Heap Tree - 8
+Complete tree, as min or max heap tree, : all roots are min/max
+https://www.geeksforgeeks.org/applications-of-heap-data-structure/ 
+https://www.geeksforgeeks.org/heap-sort/ *** heap sort logic
+1.create a tree  
+2.convert to max heap tree ⇒ root will always become largest element 
+3.swap root to last / or / excluding root create max heap again 
+
+max/min heap  - Priority Queue
+https://www.geeksforgeeks.org/heap-data-structure/ 
+
+All heap questions 
+https://www.techiedelight.com/heap-interview-questions/ 
+
+Time complexity of heapify is O(Logn) ( sort nlogn)
+ createAndBuildHeap() is O(n) and overall time complexity of Heap Sort is O(nLogn).
+Each insertion takes - logk // k is no of ele in heap
+https://www.techiedelight.com/sort-k-sorted-array/ 
+https://www.techiedelight.com/find-kth-smallest-element-array/ 
+Nlogn / nlogk / n+klogn // sort/ maxH/ minH
+https://www.techiedelight.com/find-kth-largest-element-array/ 
+https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/  
+https://www.techiedelight.com/first-k-non-repeating-characters-string/ 
+https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-character/ 
+https://www.techiedelight.com/find-first-k-maximum-occurring-words-given-set-strings/ trie + PQ 
+https://www.techiedelight.com/check-binary-tree-is-min-heap/ 
+1.structure 2*i+½  	 2.minH	//recursive 
+https://www.techiedelight.com/efficiently-merge-k-sorted-linked-lists/ 
+pq.push(3) ,  While min.next
+https://www.geeksforgeeks.org/median-of-stream-of-running-integers-using-stl/ 
+Stone fight https://youtu.be/-1jxt_DPl48?t=363 while stoneCount > 1
+
+
+
+Red-Black tree 
+(self-balancing + 4 rules) => eff search,max,min
+https://www.geeksforgeeks.org/red-black-tree-set-1-introduction-2/ 
+
+------------------------------------------------------------------------------------------------------------------------
+Trie - 2
+https://youtu.be/xqsaAhQC6c8 
+https://www.techiedelight.com/trie-interview-questions/ 
+https://www.techiedelight.com/find-maximum-occurring-word-given-set-strings/ 
+https://www.geeksforgeeks.org/print-unique-rows/ 
+
+Threaded trees
+http://www.btechsmartclass.com/data_structures/threaded-binary-trees.html 
+
+
+Fenwick tree
+Segmented Trees 
+ range query tree
+Store sum. Insert , delete 
+https://www.youtube.com/watch?v=Ic7OO3Uw6J0 
+MMT-10 banks - 1l transactions // total amount from 8-9 am
+
+AVL tree
+https://www.geeksforgeeks.org/avl-tree-set-1-insertion/ 
+KD trees
+https://www.quora.com/What-is-a-kd-tree-and-what-is-it-used-for 
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Linked List - 20
+https://www.geeksforgeeks.org/linked-list-vs-array/ 
+Insert :  front, last, at, after
+Delete : front, last, after, at 
+Length: 
+
+
+https://www.geeksforgeeks.org/reverse-a-linked-list/  prev cur next
+https://www.geeksforgeeks.org/recursively-reversing-a-linked-list-a-simple-implementation/  jaaate raho, rev karte raho; null tak null tak
+Reverse a linked list in groups of size k ; if (next != null)
+  recursively  
+https://www.geeksforgeeks.org/check-if-a-linked-list-is-circular-linked-list/ 
+https://www.geeksforgeeks.org/flattening-a-linked-list/ *** merge from right to left
+ 
+https://www.geeksforgeeks.org/add-1-number-represented-linked-list/?ref=rp  ; rev --- +1 ---- rev ; recursively **
+123, 129, 999, 9 // store ref to prev no which wasn't 9
+https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/ 
+
+https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/ while sptr fptr ;  initial;;;;  (slow = fast = head)
+https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/  //hash //slow & fast ptr
+https://www.techiedelight.com/determine-linked-list-palindrome-or-not/ //stack 
+
+
+https://www.geeksforgeeks.org/rearrange-a-linked-list-in-zig-zag-fashion-set-2/ $; 
+https://www.geeksforgeeks.org/delete-n-nodes-after-m-nodes-of-a-linked-list/ 
+https://www.geeksforgeeks.org/rearrange-a-linked-list-such-that-all-even-and-odd-positioned-nodes-are-together/ empty,1,2, odd,/even no of node,
+https://youtu.be/YE9ggKeHeK0 
+https://www.geeksforgeeks.org/sort-a-linked-list-of-0s-1s-or-2s/ : hash **** traverse
+https://www.geeksforgeeks.org/decimal-equivalent-of-binary-linked-list/ 
+https://www.geeksforgeeks.org/merge-sort-for-linked-list/ 
+https://www.geeksforgeeks.org/binary-search-on-singly-linked-list/ 
+https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/ ******* 3rd ll  (Using Recursion) ; consider a/b == null, 
+**https://www.geeksforgeeks.org/write-a-function-to-get-the-intersection-point-of-two-linked-lists/ ;  1) mark visited node 
+https://www.geeksforgeeks.org/reverse-a-doubly-linked-list/ 
+1-2-3-4-5-6-7 // delete 4, only ref to 4 is given// copy elements 
+Smaller-key-bigger  1-7-6-8-5-3-5-4 //   1-3-4-7-6-8-5-5 
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Recursion - 4
+https://www.geeksforgeeks.org/flood-fill-algorithm-implement-fill-paint/ 
+https://youtu.be/RwozX--B_Xs 
+https://www.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/ 
+https://www.geeksforgeeks.org/how-to-print-maximum-number-of-a-using-given-four-keys/ 
+https://www.geeksforgeeks.org/combinational-sum/ 
+
+
+****************************************************************
+****************************************************************
+Miscellaneous 
+
+https://www.techiedelight.com/determine-given-number-palindrome-not/ //construct rev and check  // rev = rev * 10 + r
+https://leetcode.com/explore/featured/card/may-leetcoding-challenge/537/week-4-may-22nd-may-28th/3338/ ; merge intervals ; max/min 
+https://www.geeksforgeeks.org/finding-sum-of-digits-of-a-number-until-sum-becomes-single-digit/ ayyo ; ayyoyo ; o(1) = 9x+k
+https://www.geeksforgeeks.org/find-non-overlapping-intervals-among-a-given-set-of-intervals/  non overlapping  intervals 
+https://www.geeksforgeeks.org/find-water-in-a-glass/ 
+
+
+****************************************************************
+
+
+*https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/ 
+https://youtu.be/YxuK6A3SvTs?t=12 **** -ve number addressed 
+
+Circular, max sum subarray // https://youtu.be/Q1TYVUEr-wY?t=47 
+Happy number https://youtu.be/Egw03gI-Tf0?t=3 
+Group anagram https://youtu.be/0I6IL3TnIZs?t=766  sort, map of map
+https://www.geeksforgeeks.org/stock-buy-sell/  // local minima and maxima 
+Variation: Consider 2 time buy
+Consider if prices are always dropping
+Variation: Consider buy only once
+
+Expression evaluation 
+https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/ 
+
+
+
+https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/  sort arrival& dep; merge with A/D tag, keep +counter-
+https://www.geeksforgeeks.org/counting-inversions/ ********
+Merge sort ; inv_c + Mid - 1
+Skyline problem https://youtu.be/GSBLe8cKu0s 
+Max in queue, start +q ; end -q ; if change consider
+https://www.youtube.com/watch?v=RORuwHiblPc text justification [word1][word3] = 
+Chocolates
+Celebrity 
+
+
+
+
+
+Point form straight line?? https://youtu.be/f2n9NOkqvZQ  
+Random weight pick // https://youtu.be/fWS0TCcr-lE 
+Queue reconstruction by height // https://youtu.be/khddrw6Bfyw?t=859 
+Flights cost  // https://youtu.be/60RbWlDFsmI 
+Search insert position // bin search // https://youtu.be/0A40XJH_VvE?t=311 
+Is subsequence // https://youtu.be/PwQnydsKk_I 
+****************************************************************
+****************************************************************
+
+Video stitching https://www.youtube.com/watch?v=Gg64QXc9K0s 
+Garden watering https://youtu.be/Pk128gC_sdw 
+Dining dumb philosopher; https://www.youtube.com/watch?v=NbwbQQB7xNQ 
+Semaphore, mutex, (atomic lock), priority 
+Binary tree encoding decoding
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Stacks - 6
+
+ Implement a stack with push(), pop() and min() in O(1) time. // new min stack 
+***https://www.geeksforgeeks.org/next-greater-element/ 
+Next greater to left  
+Nearest smaller to left
+Nearest smaller to right 
+https://www.geeksforgeeks.org/build-lowest-number-by-removing-n-digits-from-a-given-number/ 
+https://youtu.be/3QJzHqNAEXs?t=327 // remove the first dip // spl 0 // stack
+https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/ 
+**https://www.geeksforgeeks.org/largest-rectangle-under-histogram/ 
+Calc area while u pop from stack, add when u find an bar raiser :)
+**https://www.geeksforgeeks.org/the-stock-span-problem/ //prev greater ele
+https://youtu.be/lGWLBgwd-cw?t=622 
+https://www.geeksforgeeks.org/trapping-rain-water/ https://youtu.be/KV-Eq3wYjxI?t=229 
+
+
+Queue - 5
+https://www.geeksforgeeks.org/lru-cache-implementation/ 
+https://youtu.be/UudCSLREm08?t=105  
+https://www.geeksforgeeks.org/implement-stack-using-queue/ q1,q2 
+https://www.geeksforgeeks.org/snake-ladder-problem-2/ 
+**https://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/ 
+https://youtu.be/zcnVaVJkLhY?t=372 
+https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/ BFS+ queue
+https://youtu.be/CxrnOTUlNJE?t=578 
+ 
+
+
+
+Graph - 19
+
+Dijkstra's alg(Shortest path); greedy; o(vlogv)
+https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/ 
+Prims (MST) (sub graph - all V connected - no cycle - min cost)
+https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/ 
+Kruskals
+
+
+Bellman ford; dp; (Shortest path with -ve edge o(ve))
+https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/ 
+Flloyd  (all pair shortest path)
+https://www.geeksforgeeks.org/floyd-warshall-algorithm-dp-16/
+
+
+
+ directed non directed impact on cycle
+BFS(queue):https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/ 
+DFS:https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/ 
+Undirected cycle(parent) : using bfs/dfs
+https://www.geeksforgeeks.org/detect-cycle-undirected-graph/ 
+Directed(recStack):  using/dfs 
+https://www.geeksforgeeks.org/detect-cycle-in-a-graph/ 
+
+
+Topo (Stack)https://www.geeksforgeeks.org/topological-sorting/ 
+**https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/ 
+https://www.educative.io/edpresso/what-is-a-bipartite-graph 
+
+
+
+Hamilton ;
+Reach start v by traveling through other v only once, check for duplicate cycle with diff start 
+ https://www.geeksforgeeks.org/hamiltonian-cycle-backtracking-6/ 
+
+
+
+Islands https://www.geeksforgeeks.org/find-number-of-islands/ Friend circle Visited [bool] // https://youtu.be/__98uL6wst8 
+https://www.ideserve.co.in/learn/friend-circles-graph 
+https://www.techiedelight.com/flood-fill-algorithm/ BFS-Q, dfs - recursion 
+
+
+
+All path from s-d; visited[bool], path[src]
+https://www.geeksforgeeks.org/find-paths-given-source-destination/ 
+https://www.geeksforgeeks.org/strongly-connected-components/  
+
+
+
+Bit manipulation
+https://www.geeksforgeeks.org/count-set-bits-in-an-integer/ 
+Sum += x %  2, or(biitwise and with 1)  ,,, right shift x >>= 1
+https://www.geeksforgeeks.org/rotate-bits-of-an-integer/ 
+M -- n ; and // https://youtu.be/-qrpJykY2gE 
+Number compliment https://youtu.be/LA1BnKiarEQ  
+Power of 2 ?? https://youtu.be/4cqHahxFTYw?t=535 
+
+
+Regex 
+Valid ipv4 ipv6https://youtu.be/EB5FAwHqpm4 
+
+
+2023
+
+2 pointer problems // left and right
+Find 2: Sort - left and right
+Find : fix one 1st - sort - 2 ptr
+Rain water collection : https://leetcode.com/problems/trapping-rain-water/solutions/3401992/100-detailed-explaination-with-pictures-in-c-java-python-two-pointers/ 
+
+
+
+ 
+
+
+
+System design
+https://nerohoop.gitbooks.io/system-design/content/system-design-and-scalability/cap-theory.html  
+https://www.educative.io/courses/grokking-the-system-design-interview/m2ygV4E81AR 
+http://highscalability.com/all-time-favorites/ 
+https://www.freecodecamp.org/news/systems-design-for-interviews/#section-10-polling-streaming-sockets 
+
+iOS design questions
+Search throttling
+Image downloader 
+Network engine 
+Notification center 
+Sdk design
+Paginations
+Dynamic forms, UI
+Analytics manager 
+ 
+Design Facebook contact app with an indicator if an user is online or not 
+Find closest k restaurants out of 1 million restaurants from your location  
+
+
+
+
+System design 
+How would you design a tinyURL system?
+Need? Easy read and secure 
+Data per entry? 3trilion 10^7
+Hashing alg? Base62, MD5
+Search and validate using Trie
+Zookeeper, load balancer, cache + LRU 
+https://www.youtube.com/watch?v=eCLqmPBIEYs ****
+https://www.youtube.com/watch?v=JQDHz72OA3c&t=760s 
+
+
+
+Autocomplete search
+Request : Trie, cache, zookeeper, load balancer, 
+Collect data: weights day based cassandra, applier push to trie structure 
+https://www.youtube.com/watch?v=us0qySiUsGU
+
+How would you design a search engine?
+
+
+Parking lot 
+Call center 
+
+
+Chat applications
+How data is sent: polling, sockets(bi directional) i.e heartbeat
+E-E encryption: 
+ https://www.youtube.com/watch?v=zKPNUMkwOJE 
+
+
+How do you design a web crawler, and when should it be used?
+
+
+How do you design a shared drive?
+Operations: r/w, upload/download, sync, history of file/versions 
+Scale: 50m users, 500m requests per day
+Approach: Single file vs chunks/blocks (HDFS) ; save data, latency ,achieve concurrency , hash, metadata
+Components: Files, watcher, chunker, Indexer, internal client db, queues, sync service, cache, rdbms db, S3, deadlock are handled by services
+CDN’s - ex netflix 
+Search text in notes, images, pdf using NLP
+https://www.youtube.com/watch?v=U0xTu6E2CT8 
+
+
+
+What is required to design a garbage collection system?
+How do you design a recommendation system?
+Parking lot https://www.youtube.com/watch?v=DSGsa0pu8-k 
+Stack , hash 
+Qr code scanner  https://www.youtube.com/watch?v=rdJIM3jcICE 
+Cards game, uno??
+Throttling in search, rate limiting 
+
+
+
+
+
+
+
+
+
+
+
+Theory 
+
+https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees ***************
+https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees **
+https://www.geeksforgeeks.org/applications-of-graph-data-structure/  **********
+https://www.geeksforgeeks.org/applications-of-tree-data-structure/ **********
+https://www.geeksforgeeks.org/applications-of-queue-data-structure/ 
+https://www.geeksforgeeks.org/applications-of-linked-list-data-structure/ 
+https://en.wikipedia.org/wiki/AVL_tree 
+https://en.wikipedia.org/wiki/Red%E2%80%93black_tree 
+
+
+Recursion
+gcd
+https://www.programiz.com/c-programming/examples/hcf-recursion 
+Binary search :
+Works only on sorted
+https://www.sanfoundry.com/c-program-binary-search-recursion/ 
+End condtn: ?
+Match ??
+Next ?
+
+https://www.geeksforgeeks.org/priority-queue-using-linked-list/ 
+On push place at right position
+On pop remove first in O(1)
+
+http://c-program-example.com/2012/01/c-program-to-implement-priority-queue-using-structure.html 
+
+Linked list vs array
+Dynamic size
+contiguous allocation
+
+
+https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/ 
+Data compression lossless, 
+
+
+
+N/W
+https://www.youtube.com/watch?v=p7UR7Nipqcs 
+HTTPS : https://www.youtube.com/watch?v=CfQ2INQHkHU 
+https://support.visiolink.com/hc/en-us/articles/115000151805-App-Transport-Security-required-in-iOS-apps-submittet-after-January-1st-2017 
+Ssl certificates
+
+Ssl pinning
+https://medium.com/@dzungnguyen.hcm/ios-ssl-pinning-bffd2ee9efc 
+
+
+
+
+
+
+For loop
+https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html 
+
+https://medium.com/@chetan15aga/swift-protocols-properties-distinction-get-get-set-32a34a7f16e9 
+
+https://www.hackingwithswift.com/example-code/arrays/how-to-sort-an-array-using-sort 
